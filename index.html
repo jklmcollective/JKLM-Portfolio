@@ -258,7 +258,7 @@
     min-width:0;
   }
   .title-badge{width:90px; flex:none; display:flex; align-items:center; justify-content:center;}
-  .title-badge img{width:100%;height:100%;}
+  .title-badge img{width:100%;height:100%;object-fit:contain;}
   .section-head .count{
     font-family:var(--font-mono);
     font-size:12px;
@@ -379,15 +379,17 @@
   .client-block{
     border:1px solid var(--hair);
     background:var(--panel);
-    padding:36px;
-    margin-bottom:24px;
+    padding:22px 24px 20px;
+    margin:0 auto 24px;
+    width:fit-content;
+    max-width:100%;
     border-radius:2px;
   }
   .client-head{
     display:flex;
     align-items:center;
     gap:18px;
-    margin-bottom:24px;
+    margin-bottom:16px;
   }
   .client-logo{
     width:64px;height:64px;
@@ -430,10 +432,12 @@
   }
   .asset-tall{grid-column:1 / -1;}
   .asset-tall img{
+    width:480px;
+    max-width:100%;
     height:auto;
-    max-height:640px;
     object-fit:contain;
-    background:#111;
+    background:none;
+    display:block;
   }
   .client-assets.assets-centered{
     display:flex;
@@ -513,6 +517,7 @@
     letter-spacing:.04em;
     color:var(--grey);
   }
+
 
   /* ---------- about strip ---------- */
   .about{
@@ -782,18 +787,27 @@
     </div>
     <h3 class="section-sub" style="margin-bottom:44px;">A running <em class="gold-em">collection</em> of finished projects</h3>
 
-    <!-- Compass — pending -->
+    <!-- Compass — populated -->
     <div class="collective-group">
       <h3 class="collective-title">Compass</h3>
-      <div class="pending-row" style="grid-template-columns:1fr;">
-        <div class="pending-box">
-          <div class="pending-top">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
-              <circle cx="12" cy="12" r="9.25"/><line x1="12" y1="2.6" x2="12" y2="4.9"/><line x1="12" y1="19.1" x2="12" y2="21.4"/><line x1="2.6" y1="12" x2="4.9" y2="12"/><line x1="19.1" y1="12" x2="21.4" y2="12"/><polygon points="12,6.2 13.7,12 10.3,12" fill="currentColor" stroke="none"/><polygon points="12,17.8 13.7,12 10.3,12" fill="none"/>
-            </svg>
-            <span class="pending-name">Compass</span>
+      <div class="client-block">
+        <div class="client-head">
+          <div>
+            <p class="client-name">Resume · Design Layout</p>
           </div>
-          <span class="pending-note">Samples coming soon</span>
+        </div>
+        <div class="client-assets assets-centered">
+          <div class="asset asset-tall"><img src="compass-resume-design.png" alt="Joshua Malyk resume in a bold two-column design layout" style="background:var(--ink);"><span class="asset-label">Resume</span></div>
+        </div>
+      </div>
+      <div class="client-block">
+        <div class="client-head">
+          <div>
+            <p class="client-name">Resume · Classic Layout</p>
+          </div>
+        </div>
+        <div class="client-assets assets-centered">
+          <div class="asset asset-tall"><img src="compass-resume-classic.png" alt="Joshua Malyk resume in a clean single-column layout" style="background:var(--ink);"><span class="asset-label">Resume</span></div>
         </div>
       </div>
     </div>
@@ -808,7 +822,6 @@
           </div>
         </div>
         <div class="client-assets assets-centered">
-          <div class="asset"><img src="austin-logo-circle.png" alt="Austin's Outdoor Services round logo" style="object-fit:contain;background:var(--ink);"><span class="asset-label">Logo</span></div>
           <div class="asset asset-tall"><img src="austins-brandguide.png" alt="Austin's Outdoor Services brand specification sheet"><span class="asset-label">Brand guide</span></div>
         </div>
       </div>
@@ -820,7 +833,6 @@
           </div>
         </div>
         <div class="client-assets assets-centered">
-          <div class="asset"><img src="fiu-logo-circle.png" alt="Fire It Up Rentals round logo" style="object-fit:contain;background:var(--ink);"><span class="asset-label">Logo</span></div>
           <div class="asset asset-tall"><img src="fiu-brandguide.png" alt="Fire It Up Rentals brand specification sheet"><span class="asset-label">Brand guide</span></div>
         </div>
       </div>
@@ -832,8 +844,43 @@
           </div>
         </div>
         <div class="client-assets assets-centered">
-          <div class="asset"><img src="edge-logo-circle.png" alt="The Edge Grill round logo" style="object-fit:contain;background:var(--ink);"><span class="asset-label">Logo</span></div>
           <div class="asset asset-tall"><img src="edge-brandguide-new.png" alt="The Edge Grill brand guidelines sheet"><span class="asset-label">Brand guide</span></div>
+        </div>
+      </div>
+
+      <div class="client-block">
+        <div class="client-head">
+          <div>
+            <p class="client-name">Sylvan Learning · Brandon</p>
+            <span class="client-tag">Owner / operator</span>
+          </div>
+        </div>
+        <div class="client-assets assets-centered">
+          <div class="asset asset-tall"><img src="sylvan-brandguide-v6.png" alt="Sylvan Learning of Westman brand sheet with logo, colour shades, business cards and photos of the tutoring centre"><span class="asset-label">Brand &amp; space</span></div>
+        </div>
+      </div>
+
+      <div class="client-block">
+        <div class="client-head">
+          <div>
+            <p class="client-name">Indigenous Creators Market</p>
+            <span class="client-tag">Class project</span>
+          </div>
+        </div>
+        <div class="client-assets assets-centered">
+          <div class="asset asset-tall"><img src="bridges-poster-creators-market.jpg" alt="Event poster for the First Annual Indigenous Creators Market, with dreamcatchers on a soft green background"><span class="asset-label">Event poster</span></div>
+        </div>
+      </div>
+
+      <div class="client-block">
+        <div class="client-head">
+          <div>
+            <p class="client-name">Land Based Learning</p>
+            <span class="client-tag">Class project</span>
+          </div>
+        </div>
+        <div class="client-assets assets-centered">
+          <div class="asset asset-tall"><img src="bridges-poster-land-based-learning.jpg" alt="Land Based Learning poster with a campfire in front of forested hills and a lake"><span class="asset-label">Poster</span></div>
         </div>
       </div>
     </div>
@@ -848,27 +895,22 @@
           </div>
         </div>
         <div class="client-assets assets-centered">
-          <div class="asset"><img src="fixgo-logo-circle.png" alt="FixGo app icon" style="object-fit:contain;background:var(--ink);"><span class="asset-label">Logo</span></div>
-          <div class="app-strip" style="justify-content:center;">
-            <div class="screen"><img src="fixgo-s01-yellow.png" alt="FixGo welcome screen, black and yellow theme"><span class="asset-label">Welcome — black &amp; yellow</span></div>
-            <div class="screen"><img src="fixgo-s01-welcome.png" alt="FixGo welcome screen, green and orange theme"><span class="asset-label">Welcome — green &amp; orange</span></div>
-          </div>
+          <div class="asset asset-tall"><img src="fixgo-brandguide.png" alt="FixGo brand specification sheet with palette, type scale and design evolution"><span class="asset-label">Brand guide</span></div>
         </div>
       </div>
     </div>
 
-    <!-- Tribute — pending -->
+    <!-- Tribute — populated -->
     <div class="collective-group">
       <h3 class="collective-title">Tribute</h3>
-      <div class="pending-row" style="grid-template-columns:1fr;">
-        <div class="pending-box">
-          <div class="pending-top">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
-              <path d="M12 3.2c-1.9 2.5-3 4.6-3 6.3a3 3 0 0 0 6 0c0-1.7-1.1-3.8-3-6.3Z" fill="currentColor" stroke="none" opacity="0.92"/><rect x="9.6" y="11.4" width="4.8" height="7" rx="0.6"/><line x1="6" y1="20.4" x2="18" y2="20.4"/>
-            </svg>
-            <span class="pending-name">Tribute</span>
+      <div class="client-block">
+        <div class="client-head">
+          <div>
+            <p class="client-name">Cory</p>
           </div>
-          <span class="pending-note">Samples coming soon</span>
+        </div>
+        <div class="client-assets assets-centered">
+          <div class="asset asset-tall"><img src="tribute-cory.png" alt="Memorial table display and folded memorial program for Cory" style="background:var(--ink);"><span class="asset-label">Memorial display &amp; program</span></div>
         </div>
       </div>
     </div>
