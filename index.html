@@ -81,7 +81,7 @@
     padding-block:80px 72px;
   }
   .hero-copy{flex:0 1 560px;min-width:0;}
-  .hero-stats-wrap{flex:1;display:flex;align-items:center;justify-content:flex-start;min-width:0;padding-left:12px;}
+  .hero-stats-wrap{flex:1;display:flex;align-items:center;justify-content:flex-end;min-width:0;}
   .hero .about-stats{flex:none;gap:26px;}
   .badge{
     flex:none;
@@ -118,8 +118,7 @@
     line-height:1.05;
     letter-spacing:-.01em;
     margin:0 0 26px;
-    max-width:11ch;
-    text-wrap:balance;
+    max-width:none;
     color:var(--paper);
   }
   h1 em{font-style:italic;color:var(--gold);}
@@ -596,6 +595,7 @@
 
   @media (max-width:760px){
     .hero{flex-direction:column;align-items:flex-start;gap:36px;padding-block:56px 48px;}
+    .hero-stats-wrap{align-self:stretch;}
     .collection-intro{flex-direction:column;}
     .collection-intro img{width:100%;}
     .client-assets{grid-template-columns:1fr 1fr;}
@@ -637,7 +637,7 @@
   <section class="hero">
     <div class="hero-copy">
       <p class="eyebrow">Joshua Malyk Presents</p>
-      <h1>Four disciplines,<br>one <em>collective</em></h1>
+      <h1><span style="white-space:nowrap">Four disciplines,</span><br>one <em>collective</em></h1>
       <p class="hero-lede" style="margin-bottom:16px;">Digital &amp; guided support through connection, organized into four collectives:</p>
       <div class="hero-numbered">
         <span><b>1.</b>Career</span>
