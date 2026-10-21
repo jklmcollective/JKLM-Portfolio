@@ -80,7 +80,12 @@
     gap:48px;
     padding-block:80px 72px;
   }
-  .hero-copy{flex:0 1 560px;min-width:0;}
+  .hero-copy{flex:1 1 auto;min-width:0;}
+  @media (min-width:761px){
+    .hero{align-items:flex-start;}
+    .hero-lede{max-width:none;white-space:nowrap;}
+    .hero-stats-wrap{flex:none;padding-top:calc(19.5px + 1.575 * clamp(38px,5.6vw,64px));}
+  }
   .hero-stats-wrap{flex:1;display:flex;align-items:center;justify-content:flex-end;min-width:0;}
   .hero .about-stats{flex:none;gap:26px;}
   .badge{
@@ -139,7 +144,7 @@
     font-size:14px;
     color:var(--paper-dim);
   }
-  .hero-numbered b{color:var(--gold);font-family:var(--font-mono);font-weight:500;margin-right:4px;}
+  .hero-numbered b{color:var(--gold);font-family:var(--font-display);font-weight:600;font-size:15px;margin-right:6px;letter-spacing:.02em;}
   .hero-cta{display:flex;gap:16px;flex-wrap:wrap;margin-top:64px;}
   .btn{
     font-family:var(--font-mono);
@@ -640,10 +645,10 @@
       <h1><span style="white-space:nowrap">Four disciplines,</span><br>one <em>collective</em></h1>
       <p class="hero-lede" style="margin-bottom:16px;">Digital &amp; guided support through connection, organized into four collectives:</p>
       <div class="hero-numbered">
-        <span><b>1.</b>Career</span>
-        <span><b>2.</b>Small business</span>
-        <span><b>3.</b>Digital tools</span>
-        <span><b>4.</b>Personal keepsakes</span>
+        <span><b>I.</b>Career</span>
+        <span><b>II.</b>Small business</span>
+        <span><b>III.</b>Digital tools</span>
+        <span><b>IV.</b>Personal keepsakes</span>
       </div>
       <p class="hero-lede">Each built to move a person or business from a vision to a finished product.</p>
       <div class="hero-cta">
