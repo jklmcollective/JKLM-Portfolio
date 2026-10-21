@@ -222,7 +222,13 @@
     border:1px solid var(--paper-dim);
     padding:32px;
   }
-  .letter-row{display:flex;flex-direction:column;gap:10px;}
+  .letter-row{display:grid;grid-template-columns:1fr auto;gap:10px 22px;align-items:start;}
+  .letter-text{display:flex;flex-direction:column;gap:10px;min-width:0;}
+  .letters{gap:40px 48px;padding:40px 32px 36px;border-style:dashed;}
+  .letters .snap.snap-sm{width:128px;margin-top:4px;}
+  .letters .snap-sm::before{width:58px;height:20px;top:-9px;}
+  .snap-empty{aspect-ratio:600/905;background:#ece6d6;display:flex;align-items:center;justify-content:center;}
+  .snap-empty span{font-family:var(--font-mono);font-size:12px;color:#8b8370;text-align:center;line-height:1.5;border:1.5px dashed #c7bea8;padding:14px 12px;}
   .letter-top{display:flex;gap:14px;align-items:baseline;}
   .letter-mark{
     font-family:var(--font-mono);
@@ -553,7 +559,7 @@
     padding:28px 8px 12px;
   }
   .snap{
-    position:relative;margin:0;width:220px;flex:none;
+    position:relative;margin:0;width:205px;flex:none;
     transform:rotate(var(--r,0deg));
     transition:transform .25s ease;
     filter:drop-shadow(0 10px 14px rgba(0,0,0,.45));
@@ -649,6 +655,8 @@
     .client-pair{grid-template-columns:1fr;}
     .client-pair > .client-block:last-child:nth-child(odd){width:100%;}
     .snaps{gap:26px 18px;}
+    .letter-row{grid-template-columns:1fr;}
+    .letters .snap.snap-sm{width:150px;margin:14px 0 6px 44px;}
     .snap{width:calc(50% - 12px);max-width:220px;}
   }
   @media (max-width:640px){
@@ -670,10 +678,9 @@
     <div class="nav-mark"><b>JKLM</b> COLLECTIVE</div>
     <ul class="nav-links">
       <li><a href="#about">Story</a></li>
-      <li><a href="#snapshots">Snapshots</a></li>
       <li><a href="#collectives">Collectives</a></li>
       <li><a href="#collection">Collection</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#connect">Connect</a></li>
     </ul>
   </nav>
 
@@ -691,7 +698,7 @@
       <p class="hero-lede">Each built to move a person or business from a vision to a finished product.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#collection">View the collection ↓</a>
-        <a class="btn btn-ghost" href="#contact">Get in touch ↗</a>
+        <a class="btn btn-ghost" href="#connect">Get in touch ↗</a>
       </div>
     </div>
 
@@ -730,52 +737,46 @@
 
     <div class="letters">
       <div class="letter-row">
+        <div class="letter-text">
         <div class="letter-top">
           <span class="letter-mark">J</span>
           <span class="letter-name">Joshua</span>
         </div>
         <p class="letter-desc">Steady, detail-oriented & invested in turning a vision into a product.</p>
+        </div>
+        <figure class="snap snap-sm snap-empty" style="--r:3deg;--t:2deg"><span>photo<br>coming</span></figure>
       </div>
       <div class="letter-row">
+        <div class="letter-text">
         <div class="letter-top">
           <span class="letter-mark">K</span>
           <span class="letter-name">Kenneth</span>
         </div>
         <p class="letter-desc">The hero, the dad who showed up for his friends & family and set the standard for what showing up truly means.</p>
+        </div>
+        <figure class="snap snap-sm" style="--r:-3deg;--t:-2deg"><img src="polaroid-04-motorcycle.jpg" alt="Polaroid: vintage photo of Kenneth on a chopper motorcycle in a residential street, captioned Where it all started"></figure>
       </div>
       <div class="letter-row">
+        <div class="letter-text">
         <div class="letter-top">
           <span class="letter-mark">L</span>
           <span class="letter-name">Layne</span>
         </div>
         <p class="letter-desc">The namesake, the anchor, the oldest cousin. The constant across generations & chapters. The name has been given again for another generation.</p>
+        </div>
       </div>
       <div class="letter-row">
+        <div class="letter-text">
         <div class="letter-top">
           <span class="letter-mark">M</span>
           <span class="letter-name">Malyk</span>
         </div>
         <p class="letter-desc">The Ukrainian-rooted family name that ties it all together.</p>
+        </div>
+        <figure class="snap snap-sm" style="--r:2deg;--t:3deg"><img src="polaroid-06-truck.jpg" alt="Polaroid: old Ford pickup parked on frosty grass by a farmhouse, captioned Old faithful"></figure>
       </div>
     </div>
 
-  </section>
-
-  <section class="section" id="snapshots">
-    <div class="section-head" style="margin-bottom:0;">
-      <h2>Snapshots</h2>
-      <div class="title-badge-wrap"><div class="title-badge"><img src="jklm-emblem.png" alt="JKLM Collective emblem"></div></div>
-    </div>
-    <h3 class="section-sub">Off the clock, <em class="gold-em">on the road</em></h3>
-    <p class="story-lede" style="margin-top:16px;">The lakes, the old trucks & the people who taught what showing up looks like.</p>
-    <div class="snaps">
-      <figure class="snap" style="--r:-4deg;--t:-4deg"><img src="polaroid-01-lake.jpg" alt="Polaroid: crouched on a rocky shore beside a young child at the lake, captioned Teaching the next one"></figure>
-      <figure class="snap" style="--r:3deg;--t:2deg"><img src="polaroid-04-motorcycle.jpg" alt="Polaroid: vintage photo of a man on a chopper motorcycle in a residential street, captioned Where it all started"></figure>
-      <figure class="snap" style="--r:-2deg;--t:-1deg"><img src="polaroid-06-truck.jpg" alt="Polaroid: old Ford pickup parked on frosty grass by a farmhouse, captioned Old faithful"></figure>
-      <figure class="snap" style="--r:4deg;--t:3deg"><img src="polaroid-03-pontoon.jpg" alt="Polaroid: fishing with a child off a pontoon boat at sunset, captioned Golden hour on the water"></figure>
-      <figure class="snap" style="--r:-3deg;--t:-2deg"><img src="polaroid-02-sylvan.jpg" alt="Polaroid: Joshua waving in the doorway of Sylvan Learning, captioned Doors open"></figure>
-      <figure class="snap" style="--r:2deg;--t:4deg"><img src="polaroid-05-home.jpg" alt="Polaroid: Joshua sitting on a couch at home beside a large letter M, captioned Home base"></figure>
-    </div>
   </section>
 
   <section class="section" id="collectives">
@@ -990,6 +991,21 @@
     </div>
   </section>
 
+
+  <section class="section" id="connect">
+    <div class="section-head" style="margin-bottom:0;">
+      <h2>Connect</h2>
+      <div class="title-badge-wrap"><div class="title-badge"><img src="jklm-emblem.png" alt="JKLM Collective emblem"></div></div>
+    </div>
+    <h3 class="section-sub">One point of contact, <em class="gold-em">one handshake</em></h3>
+    <p class="story-lede" style="margin-top:16px;">Whether it's a resume, a brand or a website, you'll be working with Joshua start to finish.</p>
+    <div class="snaps">
+      <figure class="snap" style="--r:-4deg;--t:-4deg"><img src="polaroid-02-sylvan.jpg" alt="Polaroid: Joshua waving in the doorway of Sylvan Learning, captioned Doors open"></figure>
+      <figure class="snap" style="--r:3deg;--t:2deg"><img src="polaroid-01-lake.jpg" alt="Polaroid: Joshua crouched on a rocky shore beside a young child at the lake, captioned Teaching the next one"></figure>
+      <figure class="snap" style="--r:-2deg;--t:-1deg"><img src="polaroid-03-pontoon.jpg" alt="Polaroid: Joshua fishing with a child off a pontoon boat at sunset, captioned Golden hour on the water"></figure>
+      <figure class="snap" style="--r:4deg;--t:3deg"><img src="polaroid-05-home.jpg" alt="Polaroid: Joshua sitting on a couch at home beside a large letter M, captioned Home base"></figure>
+    </div>
+  </section>
 
   <footer id="contact">
     <p class="footer-line">
