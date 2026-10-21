@@ -13,7 +13,7 @@
     --gold:#c8733f;         /* rust (replaces gold) */
     --gold-soft:#d9a27a;
     --line:#3a3a3c;
-    --panel:#0b1526;
+    --panel:rgba(11,21,38,.72);
     --tape:rgba(214,196,160,.78);
 
     --font-display:'Zilla Slab',ui-serif,Georgia,serif;
@@ -225,8 +225,8 @@
   .letter-row{display:grid;grid-template-columns:1fr auto;gap:10px 22px;align-items:start;}
   .letter-text{display:flex;flex-direction:column;gap:10px;min-width:0;}
   .letters{gap:40px 48px;padding:40px 32px 36px;border-style:dashed;}
-  .letters .snap.snap-sm{width:128px;margin-top:4px;}
-  .letters .snap-sm::before{width:58px;height:20px;top:-9px;}
+  .letters .snap.snap-sm{width:100px;margin-top:4px;}
+  .letters .snap-sm::before{width:46px;height:16px;top:-8px;}
   .snap-empty{aspect-ratio:600/905;background:#ece6d6;display:flex;align-items:center;justify-content:center;}
   .snap-empty span{font-family:var(--font-mono);font-size:12px;color:#8b8370;text-align:center;line-height:1.5;border:1.5px dashed #c7bea8;padding:14px 12px;}
   .letter-top{display:flex;gap:14px;align-items:baseline;}
@@ -656,7 +656,7 @@
     .client-pair > .client-block:last-child:nth-child(odd){width:100%;}
     .snaps{gap:26px 18px;}
     .letter-row{grid-template-columns:1fr;}
-    .letters .snap.snap-sm{width:150px;margin:14px 0 6px 44px;}
+    .letters .snap.snap-sm{width:116px;margin:14px 0 6px 44px;}
     .snap{width:calc(50% - 12px);max-width:220px;}
   }
   @media (max-width:640px){
