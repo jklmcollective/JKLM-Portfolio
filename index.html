@@ -2,26 +2,27 @@
 <title>JKLM Collective</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Archivo:wght@400;500;600;700&family=Special+Elite&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#0f1b2e;
-    --paper:#f5f2e8;
-    --paper-dim:#c9c3b4;
-    --grey:#7c8aa3;
-    --hair:#293a54;
-    --gold:#c9a35f;
-    --gold-soft:#e4cd9c;
-    --line:#293a54;
+    --paper:#ede4d0;        /* aged cream */
+    --paper-dim:#c4b8a0;    /* faded kraft */
+    --grey:#8a8c8f;         /* weathered tin */
+    --hair:#3a3a3c;         /* barn-board seam */
+    --gold:#c8733f;         /* rust (replaces gold) */
+    --gold-soft:#d9a27a;
+    --line:#3a3a3c;
     --panel:#0b1526;
+    --tape:rgba(214,196,160,.78);
 
-    --font-display:'Fraunces',ui-serif,Georgia,serif;
+    --font-display:'Zilla Slab',ui-serif,Georgia,serif;
     --font-body:'Archivo',ui-sans-serif,system-ui,sans-serif;
-    --font-mono:'JetBrains Mono',ui-monospace,'SFMono-Regular',monospace;
+    --font-mono:'Special Elite','Courier New',ui-monospace,monospace;
   }
 
   *{box-sizing:border-box;}
-  body, body *{font-variation-settings:"opsz" 9;}
+  
   html{color-scheme:dark;}
   body{
     margin:0;
@@ -31,6 +32,8 @@
     padding:0 24px;
     -webkit-font-smoothing:antialiased;
   }
+  :root{--wood:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='600'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.004 0.09' numOctaves='3' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .85 0 0 0 0 .75 0 0 0 0 .6 0 0 0 .1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");}
+  body,.nav{background-color:var(--ink);background-image:var(--wood);background-attachment:fixed;background-size:220px 220px,cover;}
   a{color:inherit;}
   ::selection{background:var(--gold);color:var(--ink);}
   svg{display:block;max-width:100%;}
@@ -45,7 +48,7 @@
     border-bottom:1px solid var(--hair);
     position:sticky;
     top:0;
-    background:var(--ink);
+    background-color:var(--ink);background-image:var(--wood);background-attachment:fixed;background-size:220px 220px,cover;
     z-index:10;
   }
   .nav-spacer{display:none;}
@@ -72,6 +75,7 @@
   .nav-links a{text-decoration:none;color:var(--paper-dim);}
   .nav-links a:hover{color:var(--gold);}
   .nav-links li:first-child a{color:var(--paper);}
+  .nav-mark,.nav-links{font-size:13.5px;}
 
   /* ---------- hero ---------- */
   .hero{
@@ -119,7 +123,7 @@
   .eyebrow::before{display:none;}
   h1{
     font-family:var(--font-display);
-    font-weight:500;
+    font-weight:600;
     font-size:clamp(38px,5.6vw,64px);
     line-height:1.05;
     letter-spacing:-.01em;
@@ -200,6 +204,7 @@
     width:90px;
   }
   .story-badge svg,.story-badge img{width:100%;height:auto;display:block;}
+  .story-badge img,.title-badge img,.footer-emblem{mix-blend-mode:lighten;}
   .story-lede{
     color:var(--paper-dim);
     line-height:1.65;
@@ -217,7 +222,13 @@
     border:1px solid var(--paper-dim);
     padding:32px;
   }
-  .letter-row{display:flex;flex-direction:column;gap:10px;}
+  .letter-row{display:grid;grid-template-columns:1fr auto;gap:10px 22px;align-items:start;}
+  .letter-text{display:flex;flex-direction:column;gap:10px;min-width:0;}
+  .letters{gap:40px 48px;padding:40px 32px 36px;border-style:dashed;}
+  .letters .snap.snap-sm{width:128px;margin-top:4px;}
+  .letters .snap-sm::before{width:58px;height:20px;top:-9px;}
+  .snap-empty{aspect-ratio:600/905;background:#ece6d6;display:flex;align-items:center;justify-content:center;}
+  .snap-empty span{font-family:var(--font-mono);font-size:12px;color:#8b8370;text-align:center;line-height:1.5;border:1.5px dashed #c7bea8;padding:14px 12px;}
   .letter-top{display:flex;gap:14px;align-items:baseline;}
   .letter-mark{
     font-family:var(--font-mono);
@@ -238,7 +249,7 @@
   .letter-desc{color:var(--paper-dim);font-size:14.5px;line-height:1.55;margin:0;padding-left:44px;}
 
   /* ---------- section heads ---------- */
-  .section{padding-block:64px;border-top:1px solid var(--hair);}
+  .section{padding-block:64px;border-top:2px dashed var(--hair);}
   .section-head{
     display:flex;
     align-items:center;
@@ -542,6 +553,31 @@
   }
 
 
+  /* ---------- snapshots (polaroids) ---------- */
+  .snaps{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:34px 30px;
+    padding:28px 8px 12px;
+  }
+  .snap{
+    position:relative;margin:0;width:205px;flex:none;
+    transform:rotate(var(--r,0deg));
+    transition:transform .25s ease;
+    filter:drop-shadow(0 10px 14px rgba(0,0,0,.45));
+  }
+  .snap:hover{transform:rotate(0deg) scale(1.06);z-index:2;}
+  .snap img{width:100%;height:auto;display:block;}
+  .snap::before{               /* masking tape */
+    content:"";position:absolute;top:-12px;left:50%;width:84px;height:26px;
+    transform:translateX(-50%) rotate(var(--t,-3deg));
+    background:var(--tape);
+    clip-path:polygon(3% 0,97% 4%,100% 50%,96% 100%,2% 96%,0 45%);
+    z-index:1;
+  }
+  .snap-note{
+    text-align:center;margin:26px 0 0;
+    font-family:var(--font-mono);font-size:12.5px;color:var(--grey);
+  }
+
   /* ---------- about strip ---------- */
   .about{
     display:grid;
@@ -603,6 +639,7 @@
   .footer-copy{margin:0;font-family:var(--font-mono);font-size:11px;letter-spacing:normal;color:var(--grey);}
 
   @media (max-width:760px){
+    body,.nav{background-attachment:scroll;background-size:220px 220px,1000px 600px;}
     .hero{flex-direction:column;align-items:flex-start;gap:36px;padding-block:56px 48px;}
     .hero-stats-wrap{align-self:stretch;}
     .collection-intro{flex-direction:column;}
@@ -617,6 +654,10 @@
     .letters{grid-template-columns:1fr;}
     .client-pair{grid-template-columns:1fr;}
     .client-pair > .client-block:last-child:nth-child(odd){width:100%;}
+    .snaps{gap:26px 18px;}
+    .letter-row{grid-template-columns:1fr;}
+    .letters .snap.snap-sm{width:150px;margin:14px 0 6px 44px;}
+    .snap{width:calc(50% - 12px);max-width:220px;}
   }
   @media (max-width:640px){
     .nav-links{display:none;}
@@ -639,7 +680,7 @@
       <li><a href="#about">Story</a></li>
       <li><a href="#collectives">Collectives</a></li>
       <li><a href="#collection">Collection</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#connect">Connect</a></li>
     </ul>
   </nav>
 
@@ -657,7 +698,7 @@
       <p class="hero-lede">Each built to move a person or business from a vision to a finished product.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#collection">View the collection ↓</a>
-        <a class="btn btn-ghost" href="#contact">Get in touch ↗</a>
+        <a class="btn btn-ghost" href="#connect">Get in touch ↗</a>
       </div>
     </div>
 
@@ -696,32 +737,44 @@
 
     <div class="letters">
       <div class="letter-row">
+        <div class="letter-text">
         <div class="letter-top">
           <span class="letter-mark">J</span>
           <span class="letter-name">Joshua</span>
         </div>
         <p class="letter-desc">Steady, detail-oriented & invested in turning a vision into a product.</p>
+        </div>
+        <figure class="snap snap-sm" style="--r:3deg;--t:2deg"><img src="polaroid-07-kid-bike.jpg" alt="Polaroid: young Joshua grinning on a kiddie motorcycle ride at the fair, captioned First set of wheels"></figure>
       </div>
       <div class="letter-row">
+        <div class="letter-text">
         <div class="letter-top">
           <span class="letter-mark">K</span>
           <span class="letter-name">Kenneth</span>
         </div>
         <p class="letter-desc">The hero, the dad who showed up for his friends & family and set the standard for what showing up truly means.</p>
+        </div>
+        <figure class="snap snap-sm" style="--r:-3deg;--t:-2deg"><img src="polaroid-04-motorcycle.jpg" alt="Polaroid: vintage photo of Kenneth on a chopper motorcycle in a residential street, captioned Where it all started"></figure>
       </div>
       <div class="letter-row">
+        <div class="letter-text">
         <div class="letter-top">
           <span class="letter-mark">L</span>
           <span class="letter-name">Layne</span>
         </div>
         <p class="letter-desc">The namesake, the anchor, the oldest cousin. The constant across generations & chapters. The name has been given again for another generation.</p>
+        </div>
+        <figure class="snap snap-sm" style="--r:-3deg;--t:-3deg"><img src="polaroid-08-layne.jpg" alt="Polaroid: Layne as a young girl smiling and holding baby Joshua, captioned The oldest cousin"></figure>
       </div>
       <div class="letter-row">
+        <div class="letter-text">
         <div class="letter-top">
           <span class="letter-mark">M</span>
           <span class="letter-name">Malyk</span>
         </div>
         <p class="letter-desc">The Ukrainian-rooted family name that ties it all together.</p>
+        </div>
+        <figure class="snap snap-sm" style="--r:2deg;--t:3deg"><img src="polaroid-06-truck.jpg" alt="Polaroid: old Ford pickup parked on frosty grass by a farmhouse, captioned Old faithful"></figure>
       </div>
     </div>
 
@@ -939,6 +992,21 @@
     </div>
   </section>
 
+
+  <section class="section" id="connect">
+    <div class="section-head" style="margin-bottom:0;">
+      <h2>Connect</h2>
+      <div class="title-badge-wrap"><div class="title-badge"><img src="jklm-emblem.png" alt="JKLM Collective emblem"></div></div>
+    </div>
+    <h3 class="section-sub">One point of contact, <em class="gold-em">one handshake</em></h3>
+    <p class="story-lede" style="margin-top:16px;">Whether it's a resume, a brand or a website, you'll be working with Joshua start to finish.</p>
+    <div class="snaps">
+      <figure class="snap" style="--r:-4deg;--t:-4deg"><img src="polaroid-02-sylvan.jpg" alt="Polaroid: Joshua waving in the doorway of Sylvan Learning, captioned Doors open"></figure>
+      <figure class="snap" style="--r:3deg;--t:2deg"><img src="polaroid-01-lake.jpg" alt="Polaroid: Joshua crouched on a rocky shore beside a young child at the lake, captioned Teaching the next one"></figure>
+      <figure class="snap" style="--r:-2deg;--t:-1deg"><img src="polaroid-03-pontoon.jpg" alt="Polaroid: Joshua fishing with a child off a pontoon boat at sunset, captioned Golden hour on the water"></figure>
+      <figure class="snap" style="--r:4deg;--t:3deg"><img src="polaroid-05-home.jpg" alt="Polaroid: Joshua sitting on a couch at home beside a large letter M, captioned Home base"></figure>
+    </div>
+  </section>
 
   <footer id="contact">
     <p class="footer-line">
