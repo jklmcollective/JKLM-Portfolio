@@ -569,35 +569,37 @@
   /* ---------- footer ---------- */
   footer{
     border-top:1px solid var(--hair);
-    padding-block:48px 60px;
-    display:flex;
-    align-items:flex-start;
-    gap:48px;
-  }
-  .footer-col{
-    flex:0 1 560px;
-    min-width:0;
+    padding-block:56px 48px;
     display:flex;
     flex-direction:column;
-    gap:10px;
+    align-items:center;
+    text-align:center;
+    gap:28px;
   }
-  .footer-mark{
+  .footer-line{
+    margin:0;
     font-family:var(--font-mono);
     font-weight:500;
-    font-size:14px;
-    letter-spacing:.16em;
+    font-size:12px;
+    letter-spacing:.1em;
     text-transform:uppercase;
     color:var(--gold);
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:8px 18px;
   }
-  .footer-meta{
-    font-family:var(--font-mono);
-    font-size:11px;
-    color:var(--grey);
-    letter-spacing:.04em;
-    line-height:1.8;
-  }
-  .footer-meta a{text-decoration:none;color:var(--paper-dim);}
-  .footer-meta a:hover{color:var(--gold);}
+  .footer-line a{color:var(--gold);text-decoration:none;}
+  .footer-line a:hover{color:var(--paper);}
+  .footer-line .footer-email{text-transform:none;text-decoration:underline;text-underline-offset:3px;color:var(--paper-dim);}
+  .footer-line .sep{color:var(--hair);}
+  .footer-social{display:flex;gap:14px;}
+  .footer-social a{width:40px;height:40px;border-radius:50%;background:#4a5568;color:#e8e6e1;display:flex;align-items:center;justify-content:center;transition:background .15s;}
+  .footer-social a:hover{background:var(--gold);color:var(--ink);}
+  .footer-social svg{width:20px;height:20px;}
+  .footer-emblem{width:150px;height:auto;display:block;}
+  .footer-copy{margin:0;font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--grey);}
 
   @media (max-width:760px){
     .hero{flex-direction:column;align-items:flex-start;gap:36px;padding-block:56px 48px;}
@@ -620,8 +622,8 @@
     .entry{grid-template-columns:30px 26px 1fr;}
     .entry-arrow{display:none;}
     .about{grid-template-columns:1fr;}
-    footer{flex-direction:column;align-items:flex-start;}
-    footer .title-badge-wrap{align-self:stretch;}
+    .footer-line .sep{display:none;}
+    .footer-line{flex-direction:column;gap:8px;}
     .client-assets{grid-template-columns:1fr;}
     .client-block{padding:24px;}
   }
@@ -687,7 +689,7 @@
         </div>
       </div>
     </div>
-    <h3>Small, steady ways of <em class="gold-em">showing up</em></h3>
+    <h3>Four names, one promise: <em class="gold-em">show up</em></h3>
 
     <p class="story-lede">The name is the reason, the people are who shape it, & Joshua shows up for the people with the vision.</p>
 
@@ -938,16 +940,16 @@
 
 
   <footer id="contact">
-    <div class="footer-col">
-      <div class="footer-mark">JKLM Collective</div>
-      <div class="footer-meta">
-        <div><a href="tel:+12047308980">204-730-8980</a></div>
-        <div><a href="mailto:j.malyk07@gmail.com">j.malyk07@gmail.com</a></div>
-        <div>Manitoba, Canada</div>
-        <div style="margin-top:8px;">© 2026 JKLM Collective</div>
-      </div>
+    <p class="footer-line">
+      <span>JKLM Collective</span><span class="sep">|</span><a href="tel:+12047308980">204-730-8980</a><span class="sep">|</span><a class="footer-email" href="mailto:j.malyk07@gmail.com">j.malyk07@gmail.com</a><span class="sep">|</span><span>Manitoba, Canada</span>
+    </p>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/joshua-malyk/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.06c.53-1 1.83-1.75 3.24-1.75 3.47 0 4.1 2.2 4.1 5.07v6.18h-4v-5.48c0-1.31-.02-2.99-1.82-2.99-1.83 0-2.11 1.43-2.11 2.9v5.57h-4z"/></svg></a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.87.25-1.46 1.5-1.46h1.55V4.47A20.7 20.7 0 0 0 14.3 4.3c-2.2 0-3.7 1.34-3.7 3.8v2.4H8.1v3h2.5V21z"/></svg></a>
+      <a href="https://sites.google.com/view/jklm-collective/home" target="_blank" rel="noopener" aria-label="JKLM Collective Google Site"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg></a>
     </div>
-    <div class="title-badge-wrap"><div class="title-badge"><img src="jklm-emblem.png" alt="JKLM Collective emblem"></div></div>
+    <img class="footer-emblem" src="jklm-emblem.png" alt="JKLM Collective emblem">
+    <p class="footer-copy">© 2026 JKLM Collective</p>
   </footer>
 
 </div>
