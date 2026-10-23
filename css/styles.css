@@ -509,3 +509,42 @@ em.rust,em.gold,h1 em,h2 em{font-style:italic;color:var(--gold);}
 /* jump links on the Collectives page match the gold numerals on Home */
 .hero-list a{color:var(--paper-dim);text-decoration:none;}
 .hero-list a:hover{color:var(--gold);}
+
+
+/* ---------- 18. Brand page ---------- */
+a.inline{color:var(--gold);text-underline-offset:3px;}
+.swatches{list-style:none;padding:0;margin:2.5rem 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1.5rem;}
+.swatch{display:grid;gap:.2rem;font-size:.9rem;color:var(--paper);}
+.swatch .chip{display:block;height:84px;margin-bottom:.6rem;border:1px solid rgba(237,228,208,.12);}
+.swatch .chip-line{border-color:var(--paper-dim);}
+.swatch code{font-family:var(--font-mono);font-size:.8rem;color:var(--gold);}
+.swatch small{color:var(--grey);font-size:.8rem;}
+.type-list{list-style:none;padding:0;margin:2.5rem 0 0;display:grid;gap:1.75rem;}
+.type-list li{display:grid;gap:.2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--hair);}
+.type-list li:last-child{border-bottom:0;}
+.type-sample{margin:0 0 .4rem;font-size:2.4rem;line-height:1.1;color:var(--paper);}
+.type-sample em{font-style:italic;color:var(--gold);}
+.type-list b{font-family:var(--font-mono);font-weight:400;font-size:.8rem;text-transform:uppercase;color:var(--gold);}
+.type-list small,.kit-item small{color:var(--grey);font-size:.85rem;}
+.voice{display:flex;align-items:center;gap:3rem;margin-top:2.5rem;}
+.voice-rules{list-style:none;padding:0;margin:0;display:grid;gap:1rem;flex:1;}
+.voice-rules li::before{content:"✦ ";color:var(--gold);}
+.voice-rules b{font-family:var(--font-display);font-weight:600;font-size:1.15rem;}
+.voice-rules span{display:block;margin:.2rem 0 0 1.35rem;color:var(--paper-dim);}
+.voice-photos{flex:none;margin:0;}
+.kit{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:2rem;}
+.kit-item{margin:0;padding:14px;border:1px solid var(--hair);background:var(--panel);}
+.kit-item img{display:block;width:100%;height:220px;object-fit:contain;background:#09121f;}
+.kit-item a:hover img{outline:2px solid var(--gold);}
+.kit-item figcaption{display:grid;gap:.15rem;margin-top:.75rem;}
+.kit-item figcaption b{font-family:var(--font-mono);font-weight:400;font-size:.8rem;text-transform:uppercase;color:var(--gold);}
+.kit-item figcaption span{color:var(--paper-dim);font-size:.9rem;}
+.land-label{font-family:var(--font-mono);font-size:.75rem;text-transform:uppercase;color:var(--gold);margin-top:1.5rem;}
+.land-label:first-child{margin-top:0;}
+@media (max-width:760px){
+  .voice{flex-direction:column;align-items:flex-start;}
+  .kit{grid-template-columns:1fr;}
+  .type-sample{font-size:1.8rem;}
+}
+.land p.land-label{margin:1.75rem 0 .4rem;}
+.land p.land-label:first-child{margin-top:0;}

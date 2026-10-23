@@ -11,10 +11,12 @@ JKLM-Portfolio/
 ├── about.html        The story (J, K, L, M), the logo, land acknowledgement
 ├── services.html     The four collectives in detail
 ├── collection.html   Portfolio work, grouped by collective
-├── contact.html      Photos of Joshua and ways to get in touch
+├── contact.html      Photos of Joshua & a Book a time button
+├── brand.html        Brand guide: logo, colours, fonts, voice, social banners
 ├── css/
 │   └── styles.css    One stylesheet shared by every page
 ├── images/           All images used by the pages
+│   └── brand/        Social banners (LinkedIn, Facebook, Google Site, post, profile, email)
 ├── classic.html      Older navy and gold version (backup)
 └── rustic.html       Redirects to the home page
 ```
