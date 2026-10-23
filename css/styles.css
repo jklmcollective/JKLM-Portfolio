@@ -107,7 +107,7 @@ img{max-width:100%;height:auto;display:block;}
   color:var(--paper-dim);
   white-space:nowrap;
 }
-.brand img{width:40px;mix-blend-mode:lighten;}
+.brand img{width:40px;}
 .brand b{color:var(--gold);font-weight:400;}
 
 .site-nav{margin-left:auto;}
@@ -236,7 +236,7 @@ em.rust,em.gold,h1 em,h2 em{font-style:italic;color:var(--gold);}
   gap:3rem;
 }
 .section-head .eyebrow{margin:0;}
-.badge{width:90px;mix-blend-mode:lighten;}
+.badge{width:90px;}
 
 
 /* ---------- 9. About page ---------- */
@@ -270,7 +270,7 @@ em.rust,em.gold,h1 em,h2 em{font-style:italic;color:var(--gold);}
   gap:3rem;
   margin-top:2.5rem;
 }
-.logo-meaning img{width:260px;flex:none;mix-blend-mode:lighten;}
+.logo-meaning img{width:260px;flex:none;}
 .logo-meaning ul{
   list-style:none;
   padding:0;
@@ -466,7 +466,7 @@ em.rust,em.gold,h1 em,h2 em{font-style:italic;color:var(--gold);}
 .social svg{width:20px;height:20px;}
 
 .footer-land{max-width:60ch;margin:0;font-size:.8rem;color:var(--grey);}
-.footer-emblem{width:130px;mix-blend-mode:lighten;}
+.footer-emblem{width:130px;}
 .footer-copy{margin:0;font-family:var(--font-mono);font-size:.7rem;color:var(--grey);}
 
 
